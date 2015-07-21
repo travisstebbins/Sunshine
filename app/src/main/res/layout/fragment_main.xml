@@ -1,4 +1,4 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,61 +9,11 @@
     tools:context=".MainActivity$PlaceholderFragment"
     android:touchscreenBlocksFocus="true">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Today, June 24"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/date_text_view" />
+    <ListView
+        android:id="@+id/listview_forecast"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="21°"
-        android:id="@+id/high_temp_text_view"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/date_text_view"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="33dp"
-        android:layout_marginStart="33dp" />
+    </ListView>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="8°"
-        android:id="@+id/low_temp_text_view"
-        android:layout_below="@+id/high_temp_text_view"
-        android:layout_alignLeft="@+id/high_temp_text_view"
-        android:layout_alignStart="@+id/high_temp_text_view"
-        android:layout_alignParentStart="false"
-        android:layout_alignParentEnd="false"
-        android:textColor="@android:color/black" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Cloudy"
-        android:id="@+id/condition_text_view"
-        android:layout_marginRight="49dp"
-        android:layout_marginEnd="49dp"
-        android:layout_below="@+id/low_temp_text_view"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:src="@android:drawable/sym_def_app_icon"
-        android:layout_alignTop="@+id/high_temp_text_view"
-        android:layout_alignRight="@+id/condition_text_view"
-        android:layout_alignEnd="@+id/condition_text_view" />
-
-</RelativeLayout>
+</FrameLayout>
