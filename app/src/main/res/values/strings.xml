@@ -8,6 +8,7 @@
     <string name="action_view_location">View Location</string>
     <string name="title_activity_detail">DetailActivity</string>
     <string name="title_activity_settings">SettingsActivity</string>
+    <string name="share">Share</string>
 
     <!-- Label for the location preference [CHAR LIMIT=30] -->
     <string name="pref_location_label">Location</string>
@@ -32,5 +33,9 @@
 
     <!-- Imperial unit for unit preference [CHAR LIMIT-NONE] -->
     <string name="pref_unit_imperial" translatable="false">imperial</string>
+
+    <!-- Error message displayed if the user does not have a maps app installed
+    and the user tries to view the location on a map [CHAR LIMIT=75] -->
+    <string name="action_view_location_error">Please install a map app to view the location</string>
 
 </resources>
