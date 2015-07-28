@@ -17,7 +17,7 @@
     <string name="pref_location_key" translatable="false">Location</string>
 
     <!-- Default postal code for location preference [CHAR LIMIT=NONE] -->
-    <string name="pref_location_default" translatable="false">77843</string>
+    <string name="pref_location_default" translatable="false">90403</string>
 
     <!-- Hint to display for the location preference [CHAR LIMIT=NONE] -->
     <string name="pref_location_hint" translatable="false">ZIP</string>
