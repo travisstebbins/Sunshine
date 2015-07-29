@@ -3,7 +3,6 @@ package com.example.android.sunshine.app;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -38,17 +37,7 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         if (id == R.id.action_view_location) {
-            Intent intent = new Intent(Intent.ACTION_VIEW);
-            String dataStr = "geo:0,0?q=" + PreferenceManager.
-                    getDefaultSharedPreferences(this).
-                    getString(getString(R.string.pref_location_key),getString(R.string.pref_location_default));
-            Uri data = Uri.parse(dataStr);
-            intent.setData(data);
-            if (intent.resolveActivity(getPackageManager()) != null) {
-                startActivity(intent);
-            } else {
-                Toast.makeText(this, getString(R.string.action_view_location_error), Toast.LENGTH_SHORT).show();
-            }
+            openPreferredLocationInMap();
             return true;
         }
 
@@ -60,5 +49,17 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void openPreferredLocationInMap() {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        String dataStr = "geo:0,0?q=" + Utility.getPreferredLocation(this);
+        Uri data = Uri.parse(dataStr);
+        intent.setData(data);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, getString(R.string.action_view_location_error), Toast.LENGTH_SHORT).show();
+        }
     }
 }
